@@ -1,0 +1,12 @@
+<section *ngIf="currContact" class="contact-details flex column align-center">
+    <span><img :src="https://robohash.org/{{currContact._id}}?size=250x250" /></span>
+    <p>Name: {{currContact.name}}</p>
+    <p>Email: {{currContact.email}}</p>
+    <p>Phone: {{currContact.phone}}</p>
+    <div class="details-btns flex justify-center">
+        <a class="clean-link" routerLink="/contact">Back</a>
+        <button (click)="goToEdit()">Edit</button>
+    </div>
+    <transfer-fund *ngIf="isFriend" [contact]="currContact"  (transfer)="transfer($event)"></transfer-fund>
+    <move-list *ngIf="movesList?.length" [movesList]="movesList" [title]= "title"></move-list>
+</section>

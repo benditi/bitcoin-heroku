@@ -1,0 +1,16 @@
+<section class="app-root">
+  <app-header class="app-header" (onSelect)="onShowLogout()"></app-header>
+  <router-outlet></router-outlet>
+  <div *ngIf="msgs" class="message"> 
+    <div class="msg-txt">
+      {{msgs}}
+    </div>
+  </div>
+  <div *ngIf="isLogoutMsg" class="message flex column align-center">
+    <p>Do you want to log out?</p>
+    <div class="answers">
+      <button class="ans-yes" (click)="onAnsYes()">Yes</button>
+      <button (click)="onAnsNo()">No</button>
+    </div>
+  </div>
+</section>

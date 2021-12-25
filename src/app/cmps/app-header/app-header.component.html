@@ -1,0 +1,12 @@
+<div class="header">
+    <div class="screen" [ngClass]="{'menu-open': isNavOn}" (click)=toggleMenu()></div>
+    <h1 (click)="onClickHeader()">Mister Bitcoin</h1>
+    <nav [ngClass]="{'menu-open': isNavOn}" >
+        <h1 *ngIf="isNavOn"> Mister Bitcoin</h1>
+        <a (click)="onClickLink('')">Home Page</a>
+        <a (click)="onClickLink('contact')">Contacts</a>
+        <a (click)="onClickLink('charts')">Chart</a>
+        <a *ngIf="isLoggedIn" (click)="onLogout()">Logout</a>
+    </nav>
+    <button class="btn-menu-toggle" [ngClass]="{'menu-open': isNavOn}" (click)=toggleMenu()>☰</button>
+</div>

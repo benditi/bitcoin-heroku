@@ -1,0 +1,5 @@
+<section class="move-list">
+    <h1>{{title}}</h1>
+    <one-move *ngFor="let move of movesList" [move]="move" [title]="title"></one-move>
+    <!-- <p>{{movesList|json}}</p> -->
+</section>

@@ -1,0 +1,14 @@
+<section *ngIf="user" class="home-page">
+    <div class="username">Hello {{user.name}}!</div>
+    <div class="coins-container flex column align-center">
+        <div class="upper-coins flex">
+            <div class="coins">
+                <img :src="./assets/icons/coins.png" />
+                Coins: ₿{{user.coins}}
+            </div>
+            <div class="coins">BTC: {{bitcoinRate | currency}}</div>
+        </div>
+        <div class="coins"> Coins worth: {{coinsWorth | currency}}</div>
+    </div>
+    <move-list *ngIf="movesList.length" [movesList]="movesList" [title]="title"></move-list>
+</section>

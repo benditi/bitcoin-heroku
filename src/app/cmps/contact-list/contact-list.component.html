@@ -1,0 +1,3 @@
+<section class="contact-list">
+    <contact-preview  *ngFor="let contact of contacts; trackBy:trackByFn" [contact]="contact" (remove)="remove.emit($event)" [isFriend]="isFriend" (addFriend)="addFriend.emit($event)"></contact-preview>
+</section>

@@ -1,0 +1,13 @@
+<section class="contact-page">
+    <div class="flex justify-space-between align-center">
+        <contact-filter></contact-filter>
+        <div (click)="onAddContact()" class="plus-icon">
+            <img src="./assets/icons/plus.png" alt="">
+        </div>
+        <!-- <input type="image" src="./assets/icons/plus.png" name="addContact" (click)="onAddContact()"/> -->
+    </div>
+    <h1>Trading Contacts (Friends)</h1>
+    <contact-list [contacts]="myContacts$|async" [isFriend]="true" (addFriend)="OnAddFriend($event)"></contact-list>
+    <h1>General Contacts</h1>
+    <contact-list [contacts]="contacts$|async" [isFriend]="false" (remove)="onRemoveContact($event)" (addFriend)="OnAddFriend($event)"></contact-list>
+</section>

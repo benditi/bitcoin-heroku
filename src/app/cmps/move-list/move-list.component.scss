@@ -1,0 +1,16 @@
+@import '../../../assets/scss/variables';
+.move-list{
+    width: 300px;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    background-color: #e2dddd;
+    border-radius: 5px;
+    margin-top: 15px;
+    padding: 20px;
+    background-color: whitesmoke;
+    @media (min-width:$mobile-breakpoint){
+        width: 500px;
+    }
+    
+}

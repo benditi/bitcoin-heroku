@@ -1,0 +1,47 @@
+@import '../../../assets/scss/helpers';
+@import '../../../assets/scss/typography';
+@import '../../../assets/scss/variables';
+.contact-details{
+    font-family: Livvic-Bold;
+    img{
+        border-radius: 50%;
+        background-color: #e8e4e4;
+        width: 200px;
+        height: 200px;
+        @media (min-width: $mobile-breakpoint) {
+            width: unset;
+            height: unset;
+        }
+    }
+    p{
+        margin: 1px;
+        font-family: Livvic-Bold;
+        @media (min-width: $mobile-breakpoint){
+            margin: 10px;
+        }
+    }
+    .details-btns{
+        margin-top: 10px;
+        a{
+            border-radius: 5px;
+            border: 1px solid rgb(118, 118, 118);
+            width: 65px;
+            height: 45px;
+            background-color: rgb(239, 239, 239);
+            padding: 1px;
+            margin-right: 10px;
+            font-size: 13.33px;
+            font-family: 'arial';
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        button{
+            width: 65px;
+            height: 45px;
+            border: 1px solid rgb(118, 118, 118);
+            border-radius: 5px;
+        }
+    }
+}

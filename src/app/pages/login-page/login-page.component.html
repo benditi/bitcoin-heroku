@@ -1,0 +1,19 @@
+<section class="login-page">
+    <h1>{{headerTxt}}</h1>
+    <div><img src="./assets/icons/bitcoin.png" alt=""></div>
+    <form *ngIf="!isLogin" (ngSubmit)="onSignup()">
+        <p>Enter your name to signup:</p>
+        <input [(ngModel)]="name" type="text" name="username" id="name" placeholder="Name">
+        <p>Enter your password:</p>
+        <input [(ngModel)]="password" type="text" name="password" id="password" placeholder="Password">
+        <button>Submit</button>
+    </form>
+    <form *ngIf="isLogin" (ngSubmit)="onLogin()">
+        <p>Enter your name:</p>
+        <input [(ngModel)]="name" type="text" name="username" id="name" placeholder="Name">
+        <p>Enter your password:</p>
+        <input [(ngModel)]="password" type="text" name="password" id="password" placeholder="Password">
+        <button>Submit</button>
+    </form>
+    <button (click)="showLogin()">{{buttonTxt}}</button>
+</section>

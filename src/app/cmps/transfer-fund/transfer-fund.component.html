@@ -1,0 +1,8 @@
+<section class="transfer-fund">
+    <p>Transfer coins to {{contact.name}}:</p>
+    <form (ngSubmit)="onTransfer()">
+        <label for="transfer"></label>
+        <input [(ngModel)]="transferSum" type="number" name="transfer" id="transfer">
+        <button>Sell</button>
+    </form>
+</section>

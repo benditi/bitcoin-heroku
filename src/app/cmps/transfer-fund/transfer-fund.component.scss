@@ -1,0 +1,35 @@
+@import '../../../assets/scss/variables';
+.transfer-fund{
+    width: 300px;
+    font-family: Livvic-SemiBold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // width: 500px;
+    padding: 20px;
+    background-color:lightblue;
+    margin-top: 10px;
+    border-radius: 5px;
+    @media (min-width:$mobile-breakpoint){
+        width: 500px;
+    }
+    form {
+        display: flex;
+    }
+    input{
+        margin-right: 15px;
+        width: 100px;
+        height: 45px;
+        font-size: 20px;
+        text-align: center;
+        border-radius: 5px;
+        border: 1px solid rgb(118, 118, 118);
+    }
+    button{
+        width: 65px;
+        height: 45px;
+        border-radius: 5px;
+        border: 1px solid rgb(118, 118, 118);
+        background-color: pink;
+    }
+}

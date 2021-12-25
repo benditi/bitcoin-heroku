@@ -1,0 +1,29 @@
+<section class="contact-edit">
+    <h1>{{header}} Contact:</h1>
+    <form [formGroup]="form" (ngSubmit)="onSaveContact(form.value)" class="flex column">
+        <div class="my-input">
+            <label for="name">Name</label>
+            <input formControlName="name" type="text" id="name">
+            <small *ngIf="form.controls.name.touched && !form.controls.name.valid">
+                Name is required (minimum 3 charaters)
+            </small>
+        </div>
+        <div class="my-input">
+            <label for="phone">Phone</label>
+            <input formControlName="phone" type="text" id="phone">
+        </div>
+        <div class="my-input">
+            <label for="email">Email</label>
+            <input formControlName="email" type="text" id="email">
+        </div>
+        <!-- <div class="my-input">
+            <label for="password">Email</label>
+            <input formControlName="password" type="text" id="password">
+        </div> -->
+        <button [disabled]="form.invalid">Save</button>
+    </form>
+    <div class="edit-btns flex justify-center">
+        <a routerLink="/contact/{{contact._id}}" class="clean-link">Back</a>
+        <button *ngIf="contact.name" (click)="onRemveContact()">Delete</button>
+    </div>
+</section>

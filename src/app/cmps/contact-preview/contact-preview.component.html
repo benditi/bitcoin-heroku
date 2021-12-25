@@ -1,0 +1,8 @@
+<div *ngIf="contact" (click)=goToDetails($event) class="contact-preview">
+    <div class="flex align-center"><img :src="https://robohash.org/{{contact._id}}?size=50x50" />
+        {{contact.name}}
+    </div>
+    <button *ngIf="!isFriend" (click)="onAddFriend($event, true)" class="clean-btn"><img src="../../../assets/icons/contact.png" alt=""></button>
+    <button *ngIf="isFriend" (click)="onAddFriend($event, false)" class="clean-btn">X</button>
+    <button *ngIf="contact.isAdmin" (click)="onRemoveContact($event)" class="clean-btn">Remove Permenantly</button>
+</div>
